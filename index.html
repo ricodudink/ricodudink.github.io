@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<link rel="stylesheet" href="prism.min.css">
+<script src="prism.min.js"></script>
+<script src="prism.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logboek - Wijzigingen aan het Calculatie Excel Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            line-height: 1;
+        }
+        pre[class*=language-] {
+             padding: 0.5em;
+        }
+
+        #menu {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 0px;
+            box-shadow: 1px 1px 1px #888;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 160px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+
+        .menu-item {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .menu-item.active {
+            color: #007bff;
+        }
+
+        .menu-item:hover {
+            color: #007bff;
+        }
+
+        #content {
+            margin-left: 200px;
+            flex: 1;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            position: relative;
+            left: 80px;
+        }
+
+        .date {
+            position: absolute;
+            left: -80px;
+            color: rgb(40, 40, 126);
+        }
+
+        p {
+            line-height: 1.4;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 1px;
+            border: 1px solid #ddd;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .menu-item.active {
+            color: #007bff !important; /* Voeg !important toe om andere stijlopties te overschrijven */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigatiemenu in de linkerbovenhoek -->
+    <div id="menu">
+        <a href="#Home" class="menu-item active">Home</a>
+        <a href="#algemeen" class="menu-item">Algemeen</a>
+        <a href="#header" class="menu-item">Header</a>
+        <a href="#hoofdblad" class="menu-item">Hoofdblad</a>
+        <a href="#spuiterij" class="menu-item">Spuiterij</a>
+        <a href="#pakketgegevens" class="menu-item">Pakketgegevens</a>
+        <a href="#bewerking" class="menu-item">Bewerking</a>
+        <a href="#calculatie" class="menu-item">Calculatie</a>
+        <a href="#instellingen" class="menu-item">Instellingen</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        // Functie om menu-items te markeren als actief bij klikken
+       document.addEventListener('DOMContentLoaded', function () {
+    var menuItems = document.querySelectorAll('.menu-item');
+    var menu = document.getElementById('menu'); // Voeg de id van je menubalk toe
+
+    menuItems.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            e.preventDefault(); // Voorkom standaardgedrag van de koppeling
+
+            // Verwijder eerst de "active" klasse van alle menu-items
+            menuItems.forEach(function (menuItem) {
+                menuItem.classList.remove('active');
+            });
+
+            // Voeg de "active" klasse toe aan het geklikte menu-item
+            this.classList.add('active');
+
+            // Haal de doellocatie op
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            // Pas de offset aan om het doelgebied iets lager te plaatsen
+            var offset = targetElement.offsetTop - document.querySelector('h2').offsetHeight - 30;
+
+            // Scroll naar de doellocatie
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        });
+    });
+
+    // Voeg een scrollgebeurtenisluisteraar toe om de menubalk te activeren
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 0) {
+            menu.classList.add('active');
+        } else {
+            menu.classList.remove('active');
+        }
+    });
+});
+
+    </script>
+
+
+    <div id="content">
+        <h1 onclick="toggleSection('Home')"></h1>
+        <div id="Home">
+        <h1>Logboek - Wijzigingen aan het Calculatie Excel Document</h1>
+        <p>Dit logboek documenteert de wijzigingen die zijn aangebracht aan het Calculatie Excel-document. Hierin worden de algemene wijzigingen en specifieke aanpassingen voor elk tabblad beschreven.</p>
+    </div>
+        <h2 onclick="toggleSection('algemeen')">Algemeen</h2>
+        <div id="algemeen">
+        <ul>
+            <li><span class="date">04-8-2023</span>Het gehele project is opnieuw gestart, waarbij alle formules opnieuw zijn ingevoerd en samengesteld.</li>
+            <li><span class="date">04-8-2023</span>Alle tabellen zijn nu als Excel-tabellen opgezet om de structuur en leesbaarheid te verbeteren.</li>
+            <li><span class="date">04-8-2023</span>De indeling van de tabbladen is herzien en er is een specifiek tabblad toegevoegd voor bewerkingen en calculaties.</li>
+            <li><span class="date">19-9-2023</span>Een logboek is verplaatst en uitgebreid om wijzigingen en updates bij te houden.</li>
+            <br>
+        </ul>
+        </div>
+
+        <h2 onclick="toggleSection('header')">header</h2>
+        <div id="header">
+        <ul>
+            <li><span class="date">04-8-2023</span>Het kleurenschema van de header is aangepast voor een verbeterde visuele aantrekkelijkheid.</li>
+            <li><span class="date">04-8-2023</span>De header heeft een nieuwe lay-out gekregen om de bruikbaarheid te vergroten.</li>
+            <li><span class="date">07-8-2023</span>Een nieuw logo is toegevoegd om de documentherkenning te verbeteren.</li>
+            <li><span class="date">07-8-2023</span>Het logboek is verplaatst en is nu beschikbaar op elk tabblad.</li>
+            <li><span class="date">07-8-2023</span>In het hoofdblad is nu zichtbaar welke tabbladen zijn gecontroleerd en bijgewerkt.</li>
+            <br>
+        </ul>
+        </div>
+
+        <h2 onclick="toggleSection('hoofdblad')">Hoofdblad</h2>
+        <div id="hoofdblad">
+        <ul>
+            <li><span class="date">04-8-2023</span>Indeling is aangepast naar alleen de belangrijke benodigdheden voor het hoofdblad.</li>
+            <li><span class="date">07-8-2023</span>Pakket nummer toegevoegd aan de rijen, dit wordt gekoppeld aan pakket gegevens.</li>
+            <li><span class="date">19-9-2023</span>Prijs berekeningen toevoegen aan schema</li>
+            <li><span class="date">19-9-2023</span>Forumles omgezet van variable naar rij gebonden, hierdoor springt formule altijd mee naar de juiste rij, voorbeeld:</li>
+            <li><pre>Oud:<code class="language-excel-formula">K12+K13;;</code>    Nieuw: <code class="language-excel-formula">[@lengte] + [@breedte];;</code></pre></li>
+            <li><span class="date">19-9-2023</span>Formule ex uitval opgeschoond.</li>
+            <li><pre>Oud: <code class="language-excel-formula">=ALS(AC7>0;AC7;ALS(AF7="M2";AK7;ALS(AF7="M3";AM7;0))*AD7)</code></pre></li>
+            <li><pre>Nieuw: <code class="language-excel-formula">=ALS([@[Harde inkoopprijs st]]>0;[@[Harde inkoopprijs st]];ALS([@inkoopeenheid]="M2";[@[m2/stuk]];ALS([@inkoopeenheid]="M3";[@[m3/stuk]];0))*[@[€ per inkoop eenheid]])</code></pre></li>
+
+            <br>
+        </ul>
+        </div>
+
+        <h2 onclick="toggleSection('spuiterij')">Spuiterij</h2>
+        <div id="spuiterij">
+        <ul>
+            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <br>
+        </ul>
+        </div>
+
+        <h2 onclick="toggleSection('pakketgegevens')">Pakketgegevens</h2>
+        <div id="pakketgegevens">
+        <ul>
+            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <br>
+        </ul>
+        </div>
+
+        <h2 onclick="toggleSection('bewerking')">Bewerking</h2>
+        <div id="bewerking">
+        <ul>
+            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <br>
+        </ul>
+        </div>
+
+        <h2 onclick="toggleSection('calculatie')">Calculatie</h2>
+        <div id="calculatie">
+        <ul>
+            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <br>
+        </ul>
+        </div>
+
+        <h2 onclick="toggleSection('instellingen')">Instellingen</h2>
+        <div id="instellingen">
+            <ul>
+                <li><span class="date">19-9-2023</span>Prijslijst toegevoegd aan de pagina, en actueel. </li>
+                <li><span class="date">19-9-2023</span>Actuele wisselkoers toegevoegd. </li>
+                <li><span class="date">19-9-2023</span>Eiken "FJ" achter eiken gezet. </li>
+                <br>
+                </ul>
+        </div>
+  
+        <h2 onclick="toggleSection('Kladblok')">Kladblok</h2>
+        <div id="Kladblok">
+            <ul>
+                <p>Codes die ik veel moet onthouden, dus hieronder even opsom.</p>
+                <li>
+                    <pre><code class="language-excel-formula">=ALS([@[Harde inkoopprijs st]]>0;[@[Harde inkoopprijs st]];ALS([@inkoopeenheid]="M2";[@[m2/stuk]];ALS([@inkoopeenheid]="M3";[@[m3/stuk]];0))*[@[€ per inkoop eenheid]])</code></pre>
+                </li>
+            </ul>
+        </div>
+    
+        
+        
+    
+    </div>
+    <script>
+        Prism.highlightAll();
+    </script>
+</body>
+</html>
+
+       
