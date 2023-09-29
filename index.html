@@ -109,14 +109,17 @@
     <!-- Navigatiemenu in de linkerbovenhoek -->
     <div id="menu">
         <a href="#Home" class="menu-item active">Home</a>
-        <a href="#algemeen" class="menu-item">Algemeen</a>
-        <a href="#header" class="menu-item">Header</a>
-        <a href="#hoofdblad" class="menu-item">Hoofdblad</a>
-        <a href="#spuiterij" class="menu-item">Spuiterij</a>
-        <a href="#pakketgegevens" class="menu-item">Pakketgegevens</a>
-        <a href="#bewerking" class="menu-item">Bewerking</a>
-        <a href="#calculatie" class="menu-item">Calculatie</a>
-        <a href="#instellingen" class="menu-item">Instellingen</a>
+        <a href="#Algemeen" class="menu-item">Algemeen</a>
+        <a href="#Header" class="menu-item">Header</a>
+        <a href="#Hoofdblad" class="menu-item">Hoofdblad</a>
+        <a href="#Spuiterij" class="menu-item">Spuiterij</a>
+        <a href="#Pakketgegevens" class="menu-item">Pakketgegevens</a>
+        <a href="#Bewerking" class="menu-item">Bewerking</a>
+        <a href="#Calculatie" class="menu-item">Calculatie</a>
+        <a href="#Instellingen" class="menu-item">Instellingen</a>
+        <a href="#Macro" class="menu-item">Macro's</a>
+        <a href="#Todo" class="menu-item">To-do</a>
+        <a href="#Kladblok" class="menu-item">Kladblok</a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script>
@@ -168,8 +171,8 @@
         <h1>Logboek - Wijzigingen aan het Calculatie Excel Document</h1>
         <p>Dit logboek documenteert de wijzigingen die zijn aangebracht aan het Calculatie Excel-document. Hierin worden de algemene wijzigingen en specifieke aanpassingen voor elk tabblad beschreven.</p>
     </div>
-        <h2 onclick="toggleSection('algemeen')">Algemeen</h2>
-        <div id="algemeen">
+        <h2 onclick="toggleSection('Algemeen')">Algemeen</h2>
+        <div id="Algemeen">
         <ul>
             <li><span class="date">04-8-2023</span>Het gehele project is opnieuw gestart, waarbij alle formules opnieuw zijn ingevoerd en samengesteld.</li>
             <li><span class="date">04-8-2023</span>Alle tabellen zijn nu als Excel-tabellen opgezet om de structuur en leesbaarheid te verbeteren.</li>
@@ -179,20 +182,21 @@
         </ul>
         </div>
 
-        <h2 onclick="toggleSection('header')">header</h2>
-        <div id="header">
+        <h2 onclick="toggleSection('Header')">header</h2>
+        <div id="Header">
         <ul>
             <li><span class="date">04-8-2023</span>Het kleurenschema van de header is aangepast voor een verbeterde visuele aantrekkelijkheid.</li>
             <li><span class="date">04-8-2023</span>De header heeft een nieuwe lay-out gekregen om de bruikbaarheid te vergroten.</li>
             <li><span class="date">07-8-2023</span>Een nieuw logo is toegevoegd om de documentherkenning te verbeteren.</li>
             <li><span class="date">07-8-2023</span>Het logboek is verplaatst en is nu beschikbaar op elk tabblad.</li>
             <li><span class="date">07-8-2023</span>In het hoofdblad is nu zichtbaar welke tabbladen zijn gecontroleerd en bijgewerkt.</li>
+            <li><span class="date">28-9-2023</span>Materiaal, lak type en afwerking weer klikbaar gemaakt.</li>
             <br>
         </ul>
         </div>
 
-        <h2 onclick="toggleSection('hoofdblad')">Hoofdblad</h2>
-        <div id="hoofdblad">
+        <h2 onclick="toggleSection('Hoofdblad')">Hoofdblad</h2>
+        <div id="Hoofdblad">
         <ul>
             <li><span class="date">04-8-2023</span>Indeling is aangepast naar alleen de belangrijke benodigdheden voor het hoofdblad.</li>
             <li><span class="date">07-8-2023</span>Pakket nummer toegevoegd aan de rijen, dit wordt gekoppeld aan pakket gegevens.</li>
@@ -202,63 +206,112 @@
             <li><span class="date">19-9-2023</span>Formule ex uitval opgeschoond.</li>
             <li><pre>Oud: <code class="language-excel-formula">=ALS(AC7>0;AC7;ALS(AF7="M2";AK7;ALS(AF7="M3";AM7;0))*AD7)</code></pre></li>
             <li><pre>Nieuw: <code class="language-excel-formula">=ALS([@[Harde inkoopprijs st]]>0;[@[Harde inkoopprijs st]];ALS([@inkoopeenheid]="M2";[@[m2/stuk]];ALS([@inkoopeenheid]="M3";[@[m3/stuk]];0))*[@[€ per inkoop eenheid]])</code></pre></li>
-
+            <li><span class="date">21-9-2023</span>Nieuw systeem opgezet voor de valuta bij de meubelbeslag lijst.</li>
+            <li><span class="date">21-9-2023</span>Leverancier code toegevoegd.</li>
+            <li><span class="date">27-9-2023</span>prijs berekeningen van materiaal en spuiterij toegevoegd.</li>
+            <li><span class="date">27-9-2023</span>prijs formules toegevoegd aan de Fornituren lijst.</li>
             <br>
         </ul>
         </div>
 
-        <h2 onclick="toggleSection('spuiterij')">Spuiterij</h2>
-        <div id="spuiterij">
+        <h2 onclick="toggleSection('Spuiterij')">Spuiterij</h2>
+        <div id="Spuiterij">
         <ul>
-            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <li><span class="date">27-9-2023</span>Lijst met basisgegevens op een moderne manier laten ophalen uit het hoofdblad.</li>
+            <li><span class="date">27-9-2023</span>Formules aangepast zodat het minder fout gevoelig is.</li>
+            <li><span class="date">27-9-2023</span>Vormgeving aangepast zodat het overzichtelijker is.</li>
+            <li><span class="date">27-9-2023</span>Tabellen omgezet naar dynamische tabellen.</li>
             <br>
         </ul>
         </div>
 
-        <h2 onclick="toggleSection('pakketgegevens')">Pakketgegevens</h2>
-        <div id="pakketgegevens">
+        <h2 onclick="toggleSection('Pakketgegevens')">Pakketgegevens</h2>
+        <div id="Pakketgegevens">
         <ul>
-            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <li><span class="date">26-9-2023</span>Basis indeling uit een excel van Julia gehaald en hier een opzet van gemaakt</li>
             <br>
         </ul>
         </div>
 
-        <h2 onclick="toggleSection('bewerking')">Bewerking</h2>
-        <div id="bewerking">
+        <h2 onclick="toggleSection('Bewerking')">Bewerking</h2>
+        <div id="Bewerking">
         <ul>
-            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <li><span class="date">19-9-2023</span>Kaal blad aangemaakt</li>
+            <li><span class="date">27-9-2023</span>Opzet voor indeling gemaakt, gezien ik even niet meer door de bomen het bos zag.</li>
+            <li><span class="date">27-9-2023</span>Indeling weer helemaal aangepast naar een nieuwe vormgeving waar alle gegevens in gaan passen.</li>
+            <li><span class="date">28-9-2023</span>Opties die in de instellingen staan toegevoegd.</li>
+            <li><span class="date">28-9-2023</span>Data uit het hoofdblad geimporteerd naar dit blad.</li>
+            <li><span class="date">28-9-2023</span>Variabelen zichtbaar gemaakt als je een machine selecteerd.</li>
             <br>
         </ul>
         </div>
 
-        <h2 onclick="toggleSection('calculatie')">Calculatie</h2>
-        <div id="calculatie">
+        <h2 onclick="toggleSection('Calculatie')">Calculatie</h2>
+        <div id="Calculatie">
         <ul>
-            <li><span class="date">19-9-2023</span>[Specifieke wijzigingen op het Spuiterij tabblad kunnen hier worden vermeld.]</li>
+            <li><span class="date">19-9-2023</span>Kaal blad aangemaakt</li>
+            <li><span class="date">26-9-2023</span>Data uit het hoofdblad geimporteerd naar dit blad.</li>
+            <li><span class="date">26-9-2023</span>Losse formule om spuitprijzen te importeren uit het hoofdblad gemaakt.</li>
+            <li><span class="date">27-9-2023</span>Indeling aangepast.</li>
+            <li><span class="date">27-9-2023</span>Bewerkings kosten toegevoegd, alhoewel hier nog een prijs aan gekoppeld moet worden.</li>
+            <li><span class="date">27-9-2023</span>Gegevens van fornituren geimporteerd en kosten toegevoegd.</li>    
+            <li><span class="date">27-9-2023</span>Aditionele kosten geimporteerd en kosten toegevoegd.</li>
+            <li><span class="date">27-9-2023</span>Totaalkosten gedeelte formules modern en snel gemaakt, ook goed gezet met de nieuwe indeling.</li> 
+            <li><span class="date">28-9-2023</span>Onderzoek gedaan naar het importeren van formules zodat de machine kosten berekend kunnen worden, heb een functie gevonden moet dit nog testen.</li>      
             <br>
         </ul>
         </div>
 
-        <h2 onclick="toggleSection('instellingen')">Instellingen</h2>
-        <div id="instellingen">
+        <h2 onclick="toggleSection('Instellingen')">Instellingen</h2>
+        <div id="Instellingen">
             <ul>
                 <li><span class="date">19-9-2023</span>Prijslijst toegevoegd aan de pagina, en actueel. </li>
                 <li><span class="date">19-9-2023</span>Actuele wisselkoers toegevoegd. </li>
                 <li><span class="date">19-9-2023</span>Eiken "FJ" achter eiken gezet. </li>
+                <li><span class="date">28-9-2023</span>Alle machines toegevoegd.</li>
+                <li><span class="date">28-9-2023</span>Opzet voor alle variabelen en formules van de machines.</li>
+                <li><span class="date">28-9-2023</span>Basis instellingen voor de machines toegevoegd, dat zodra ze een machine aanpassen of sneller wordt gezet niet alle formules overnieuw gemaakt hoeven worden.</li>
+                <li><span class="date">28-9-2023</span>Voor de wisselkoers een nieuw digitaal systeem opgezet die altijd met de meest actuele prijs rekend.</li>
+                <br>
+                </ul>
+        </div>
+        <h2 onclick="toggleSection('Macro')">Macro</h2>
+        <div id="Macro">
+            <ul>
+                <li><span class="date">28-9-2023</span>Datum knoppen voor logboek oppnieuw gecodeerd. </li>
+                <li><span class="date">28-9-2023</span>Scaling in bewerkingen pagina gecodeerd. </li>
+                <li><span class="date">28-9-2023</span>Auto refresh functie aangemaakt. </li>
                 <br>
                 </ul>
         </div>
   
+        <h2 onclick="toggleSection('Todo')">To-do</h2>
+        <div id="Todo">
+            <ul>
+    
+                <li><span class="date">TO-DO</span>Prijs voor beits toevoegen aan prijslijst, dit staat ook nog niet in exact (vragen aan Joost). </li>
+                <li><span class="date">TO-DO</span>Pakket gegevens met Julia bespreken en kijken hoe we dit in de pp gaan verwerken. </li>
+                <li><span class="date">Idee</span>Doos gegevens (1-1.iam.idw) stuklijst laten plakken in de paketgegevens blad. Daarachter het getal van het aantal pakketten.<br>
+                    Dan via het hoofdblad het pakket nummer ophalen uit die rijen. </li>
+                <li> <pre><code class="language-excel-formula">=ALS.FOUT(VERT.ZOEKEN($[@Omschrijving];Pakketgegevens!$AI:$BT;5;0);"0")
+Geen fout weergeven -> Zoek de omschrijving in pakketgegevensblad, schuif dan 3 rijen naar rechts en laat die waarde zien.</code></pre></li>
+                <li><span class="date">TO-DO</span>Iets beters bedenken voor de wisselkoers, ik wil eigenlijk de prijs van zodra het gecalculeerd is zichtbaar houden.
+                Maar ook een prijs met de actuele wisselkoers, zo kan je altijd de prijs vergelijken. </li>
+                <li><span class="date">TO-DO</span>materiaal optie met plooi en plooi en gat en gat. </li>
+
+            </ul>
+        </div>
         <h2 onclick="toggleSection('Kladblok')">Kladblok</h2>
         <div id="Kladblok">
             <ul>
-                <p>Codes die ik veel moet onthouden, dus hieronder even opsom.</p>
-                <li>
-                    <pre><code class="language-excel-formula">=ALS([@[Harde inkoopprijs st]]>0;[@[Harde inkoopprijs st]];ALS([@inkoopeenheid]="M2";[@[m2/stuk]];ALS([@inkoopeenheid]="M3";[@[m3/stuk]];0))*[@[€ per inkoop eenheid]])</code></pre>
-                </li>
-            </ul>
+                <li><span class="date">Som</span>Optellen van de cel onder b1.</li>
+                <li><pre>ENG: <code class="language-excel-formula">=OFFSET(B1,1,0)+10</code></pre></li>
+                <li><pre>NL: <code class="language-excel-formula">=VERSCHUIVING(B1;1;0)+10</code></pre></li>
+                <li><span class="date">Som</span>Optellen van de cel onder de huidige cel.</li>
+                <li><pre>ENG: <code class="language-excel-formula">=OFFSET(INDIRECT(ADDRESS(ROW(),COLUMN())),1,0)+10</code></pre></li>
+                <li><pre>NL: <code class="language-excel-formula">=VERSCHUIVING(INDIRECT(ADRES(RIJ();KOLOM()));1;0)+10</code></pre></li>
+                </ul>
         </div>
-    
         
         
     
