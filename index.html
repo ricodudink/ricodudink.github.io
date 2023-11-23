@@ -284,7 +284,18 @@
                 <br>
                 </ul>
         </div>
-  
+        <h2 onclick="toggleSection('Kladblok')">Kladblok</h2>
+        <div id="Kladblok">
+            <ul>
+                <li><span class="date">Som</span>Optellen van de cel onder b1.</li>
+                <li><pre>ENG: <code class="language-excel-formula">=OFFSET(B1,1,0)+10</code></pre></li>
+                <li><pre>NL: <code class="language-excel-formula">=VERSCHUIVING(B1;1;0)+10</code></pre></li>
+                <li><span class="date">Som</span>Optellen van de cel onder de huidige cel.</li>
+                <li><pre>ENG: <code class="language-excel-formula">=OFFSET(INDIRECT(ADDRESS(ROW(),COLUMN())),1,0)+10</code></pre></li>
+                <li><pre>NL: <code class="language-excel-formula">=VERSCHUIVING(INDIRECT(ADRES(RIJ();KOLOM()));1;0)+10</code></pre></li>
+                </ul>
+        </div>
+        
         <h2 onclick="toggleSection('Todo')">To-do</h2>
         <div id="Todo">
             <ul>
@@ -300,18 +311,7 @@ Geen fout weergeven -> Zoek de omschrijving in pakketgegevensblad, schuif dan 3 
                     Dan via het hoofdblad het pakket nummer ophalen uit die rijen. </li>
             </ul>
         </div>
-        <h2 onclick="toggleSection('Kladblok')">Kladblok</h2>
-        <div id="Kladblok">
-            <ul>
-                <li><span class="date">Som</span>Optellen van de cel onder b1.</li>
-                <li><pre>ENG: <code class="language-excel-formula">=OFFSET(B1,1,0)+10</code></pre></li>
-                <li><pre>NL: <code class="language-excel-formula">=VERSCHUIVING(B1;1;0)+10</code></pre></li>
-                <li><span class="date">Som</span>Optellen van de cel onder de huidige cel.</li>
-                <li><pre>ENG: <code class="language-excel-formula">=OFFSET(INDIRECT(ADDRESS(ROW(),COLUMN())),1,0)+10</code></pre></li>
-                <li><pre>NL: <code class="language-excel-formula">=VERSCHUIVING(INDIRECT(ADRES(RIJ();KOLOM()));1;0)+10</code></pre></li>
-                </ul>
-        </div>
-        
+
         
     
     </div>
